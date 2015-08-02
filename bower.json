@@ -1,0 +1,28 @@
+{
+  "name": "dolittle",
+  "version": "0.1.0",
+  "homepage": "https://github.com/castillobg/dolittle",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/username/project.git"
+  },
+  "authors": [
+    "castillobg"
+  ],
+  "description": "Dolittle kindly translates your camelCase JSON object keys into snake_case keys, and viceversa.",
+  "main": "dolittle.js",
+  "keywords": [
+    "json",
+    "camel",
+    "snake",
+    "ruby"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
