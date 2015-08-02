@@ -13,33 +13,34 @@ $ bower install dolittle
 // Include doolittle as a dependency to your module.
 angular.module('myapp', ['dolittle'])
 .controller('TestCtrl', function(dolittle){
-  var camelObj = {
+  var testObj = {
     helloWorld : 'Hello World',
     nestedObject : {
-      foo : 'Here be dragons',
-      bar : 123
+      danger : 'Here be dragons',
+      fooBar : [1, 2, 3],
+      fooBarBaz : [
+        { test1 : 'what'},
+        { test2 : ['this', 'that']}
+      ]
     }
   };
-  // Translate to snake_case
-  var snake_object = doolitle.translate.to.snake(camelObj);
-  // will return
+
+  var snakeized = dolittle.to.snake(testObj);
+  // will return:
   // {
-  //   hello_world : 'Hello World',
-  //   nested_object : {
-  //     foo : 'Here be dragons',
-  //     bar : 123
+  //   "hello_world" : "Hello World",
+  //   "nested_object" : {
+  //     "danger" : "Here be dragons",
+  //     "foo_bar" : [1,2,3],
+  //     "foo_bar_baz" : [
+  //       {"test1" : "what"},
+  //       {"test2" : [ "this","that"]}
+  //     ]
   //   }
   // }
 
-  doolitle.translate.to.camel(snake_object);
-  // will return the original object, with camelCase keys:
-  // {
-  //   helloWorld : 'Hello World',
-  //   nestedObject : {
-  //     foo : 'Here be dragons',
-  //     bar : 123
-  //   }
-  // }
+  var camelized = dolittle.to.camel(snakeized);
+  // will return the original object.
 });
 ```
 
