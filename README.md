@@ -5,7 +5,7 @@ clients to snake case, used in some APIs made with Ruby, for example.
 
 ## Install it
 ```sh
-$ bower install dolittle
+$ bower install dolittle --save
 ```
 
 ## Use it
