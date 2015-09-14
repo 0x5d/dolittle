@@ -1,4 +1,4 @@
-angular.module('dolittle')
+angular.module('dolittle', [])
 .factory('dolittle', function(){
   'use strict'
 
@@ -11,9 +11,9 @@ angular.module('dolittle')
   function camel(obj){
     return iterate(obj, function(propName){
       return propName.replace(/^_+/, '')
-    		.replace(/_+([a-z])/g, function(_, char) {
-    			return char.toUpperCase();
-    		});
+        .replace(/_+([a-z])/g, function(_, char) {
+          return char.toUpperCase();
+        });
     });
   };
 
