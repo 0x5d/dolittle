@@ -1,7 +1,7 @@
 # dolittle
 Dolittle kindly translates your camelCase JSON object keys into snake_case keys, and viceversa.
-It's an angular module meant to minimize the effort in translating camel case JSON keys of JS
-clients to snake case, used in some APIs made with Ruby, for example.
+It's a minimalistic angular module meant to minimize the effort in translating camel case JSON keys
+of JS clients to snake case, used in some APIs made with Ruby, for example.
 
 ## Install it
 ```sh
@@ -20,7 +20,8 @@ angular.module('myapp', ['dolittle'])
       fooBar : [1, 2, 3],
       fooBarBaz : [
         { test1 : 'what'},
-        { test2 : ['this', 'that']}
+        { test2 : ['this', 'that']},
+        nullioVonJulio : null
       ]
     }
   };
@@ -34,7 +35,8 @@ angular.module('myapp', ['dolittle'])
   //     "foo_bar" : [1,2,3],
   //     "foo_bar_baz" : [
   //       {"test1" : "what"},
-  //       {"test2" : [ "this","that"]}
+  //       {"test2" : [ "this","that"]},
+  //       "nullio_von_julio" : null
   //     ]
   //   }
   // }
@@ -45,5 +47,5 @@ angular.module('myapp', ['dolittle'])
 ```
 
 ## Thanks to
-painpony for pointing out the zoo in this module, and [zubieta](https://github.com/Zubieta) for
+[painpony](https://github.com/painpony) for pointing out the zoo in this module, and [zubieta](https://github.com/Zubieta) for
 the funny name.

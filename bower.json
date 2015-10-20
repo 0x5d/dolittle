@@ -1,10 +1,10 @@
 {
   "name": "dolittle",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/castillobg/dolittle",
   "repository": {
     "type": "git",
-    "url": "git://github.com/username/project.git"
+    "url": "git://github.com/castillobg/dolittle.git"
   },
   "authors": [
     "castillobg"
