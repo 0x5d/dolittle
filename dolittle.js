@@ -21,6 +21,9 @@ angular.module('dolittle', [])
     if(typeof obj !== 'object'){
       return obj;
     }
+    else if(obj == null) {
+      return null;
+    }
     var translatedObj = {};
     for(var prop in obj){
       if(obj[prop] instanceof Array){
